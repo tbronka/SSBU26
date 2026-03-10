@@ -1,4 +1,4 @@
-# SSBU CV3: Práca s databázami
+ # SSBU CV3: Práca s databázami
 
 ### National Center for Biotechnology Information
 - Súbor biomedicínskych a biotechnologických databáz
