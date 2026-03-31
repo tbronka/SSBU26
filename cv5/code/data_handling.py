@@ -8,6 +8,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from typing import Tuple, List, Optional, Callable
 
+from cv5.code.data_scaler import DataScaler
+
+
 class Dataset:
     """
     This class handles loading, preprocessing, analyzing, and visualizing the breast cancer dataset.
@@ -69,11 +72,12 @@ class Dataset:
         """
         scalers = {
             'standard': StandardScaler(),
-            'normalize': MinMaxScaler()
+            'normalize': MinMaxScaler(),
+            'robust' : DataScaler(),
         }
         scaler = scalers.get(scale_type)
         if not scaler:
-            raise ValueError("Invalid scale_type. Choose 'standard' or 'normalize'.")
+            raise ValueError("Invalid scale_type. Choose 'standard' or 'normalize' or 'robust'.")
         return scaler.fit_transform(X_train), scaler.transform(X_test)
 
     def visualize_feature_distribution(self, feature_index: int, scaled_data: Optional[np.ndarray] = None, title_suffix: str = ""):
@@ -196,3 +200,38 @@ class Dataset:
         self.__generic_plot(plt.hist, scaled_feature, bins=20, color='orange', alpha=0.7,
                             title=f"After Scaling: {feature_name}", xlabel=feature_name, ylabel="Frequency",
                             figsize=(12, 6))
+
+    def calculate_statistics(self):
+        #create a DataFrame from self.data with columns as self.feature_names
+        df = pd.DataFrame(self.data, columns=self.feature_names)
+        #calculate mean, median, and standard deviation for each feature (rename the columns, if necessary)
+        #return the statistics as a DataFrame
+        stats = df.agg(['mean', 'median', 'std']).transpose()
+        return stats
+
+    def summarize_features(self, feature_names: Optional[List[str]] = None):
+        #create a DataFrame
+        df = pd.DataFrame(self.data, columns=self.feature_names)
+
+        #return the summary as a DataFrame
+        summary = []
+
+        #add an optional parameter feature_names to specify the features to summarize
+        #if feature_names is None, summarize all features
+        #otherwise, summarize only the specified features
+        selected_features = feature_names if feature_names is not None else self.feature_names
+
+        #calculate the number of unique values, the most common value, and its frequency for each feature
+        for feature in selected_features:
+            count_unique = df[feature].nunique()
+            most_common_value = df[feature].mode()[0]
+            frequency = (df[feature] == most_common_value).sum()
+
+            summary.append({
+                'feature': feature,
+                'unique_values': count_unique,
+                'most_common_value': most_common_value,
+                'frequency': frequency
+            })
+
+        return pd.DataFrame(summary).set_index('feature')
