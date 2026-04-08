@@ -4,6 +4,7 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
 from data.data_handling_refactored import DatasetRefactored
 from experiment.experiment import Experiment
 from plotting.experiment_plotter import ExperimentPlotter
@@ -19,10 +20,16 @@ def initialize_models_and_params():
     - param_grids: dict, dictionary of hyperparameter grids.
     """
     models = {
-        "Logistic Regression": LogisticRegression(solver='liblinear')
+        "Logistic Regression": LogisticRegression(solver='liblinear'),
+        "SVC": SVC(C=0.6, kernel='linear', probability=True),
     }
     param_grids = {
-        "Logistic Regression": {"C": [0.1, 1, 10], "max_iter": [10000]}
+        "Logistic Regression": {"C": [0.1, 1, 10], "max_iter": [10000]},
+        "SVC": {
+            "gamma": ['scale', 0.01, 0.1, 1],
+            "degree": [3, 4],
+            "coef0": [0, 1]
+        }
     }
     return models, param_grids
 
@@ -42,7 +49,7 @@ def run_experiment(dataset, models, param_grids, logger):
     - results: DataFrame, the results of the experiment.
     """
     logger.info("Starting the experiment...")
-    experiment = Experiment(models, param_grids, logger=logger)
+    experiment = Experiment(models, param_grids, n_replications=50, logger=logger)
     results = experiment.run(dataset.data, dataset.target)
     logger.info("Experiment completed successfully.")
     return experiment, results

@@ -1,0 +1,11 @@
+Model,Replication,Accuracy,F1 Score,ROC AUC,Recall,Best Parameters
+Logistic Regression,1,0.9860,0.9855,0.9973,0.9927,"{'C': 1, 'max_iter': 10000}"
+SVC,1,0.9720,0.9718,0.9942,0.9857,"{'coef0': 0, 'degree': 3, 'gamma': 'scale'}"
+Logistic Regression,2,0.9895,0.9888,0.9997,0.9852,"{'C': 10, 'max_iter': 10000}"
+SVC,2,0.9860,0.9850,0.9956,1.0000,"{'coef0': 0, 'degree': 3, 'gamma': 'scale'}"
+Logistic Regression,3,0.9720,0.9726,0.9926,0.9930,"{'C': 10, 'max_iter': 10000}"
+SVC,3,0.9685,0.9670,0.9953,0.9851,"{'coef0': 0, 'degree': 3, 'gamma': 'scale'}"
+Logistic Regression,4,0.9720,0.9701,0.9912,0.9848,"{'C': 10, 'max_iter': 10000}"
+SVC,4,0.9790,0.9786,0.9948,0.9856,"{'coef0': 0, 'degree': 3, 'gamma': 'scale'}"
+Logistic Regression,5,0.9860,0.9863,0.9927,0.9931,"{'C': 10, 'max_iter': 10000}"
+SVC,5,0.9860,0.9852,0.9988,1.0000,"{'coef0': 0, 'degree': 3, 'gamma': 'scale'}"

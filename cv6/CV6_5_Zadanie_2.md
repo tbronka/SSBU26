@@ -14,7 +14,12 @@ Pridajte do kódu ďalší model strojového učenia (ľubovoľný), a taktiež 
 
 **Uveďte aký ML model a hodnoty jeho parametrov ste použili:**
 
-#TODO - Popis
+# SVC = SUpport Vector Classifier s polynomiálnym jadrom
+- volím model SVC, nakoľko mojou prvou myšlienkou bolo použitie nejakého typu regresie (poisson/gama), no po debate s AI som usúdila, že tento typ nie je na daný dataset vhodný a preto volím SVC 
+Hodnoty parametrov:
+    - C -> 0.6
+    - kernel -> 'linear' (najskôr som chcela zvoliť 'poly', no pre čas som to upravila na linear)
+    - gamma -> ['scale', 0.01, 0.1] => nižšie aby som predišla overfitting-u
 
 ### Úloha 2 (2b)
 
@@ -22,7 +27,7 @@ Implementujte ďalšiu (ľubovoľnú) metriku pre evaluáciu modelov. Nezabudnit
 
 **Uveďte akú metriku ste doplnili:**
 
-#TODO - Metrika
+Recall - správna identifikácia TP / (TP + FN) (skutočne pozitívnych)
 
 ### Úloha 3 (1b)
 

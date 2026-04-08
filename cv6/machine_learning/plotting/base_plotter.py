@@ -1,3 +1,5 @@
+import os
+
 from matplotlib import pyplot as plt
 from typing import Callable
 
@@ -19,6 +21,17 @@ class BasePlotter:
         plot_func(*args, **kwargs)
         self.__apply_plot_labels(general_kwargs)
         plt.tight_layout()
+
+        title = general_kwargs.get('title', 'plot')
+        file_name = title.replace(" ", "_").replace("/", "_").lower() + ".png"
+
+        # Cesta k priečinku outputs (uisti sa, že existuje)
+        output_path = os.path.join("outputs", file_name)
+
+        # Uloženie grafu
+        plt.savefig(output_path)
+        print(f"Graf uložený do: {output_path}")
+
         plt.show()
 
     def __apply_plot_labels(self, general_kwargs):

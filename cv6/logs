@@ -1,0 +1,318 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26> python -m venv venv
+Program 'python.exe' failed to run: The system cannot find the path specifiedAt line:1 char:1
++ python -m venv venv
++ ~~~~~~~~~~~~~~~~~~~.
+At line:1 char:1
++ python -m venv venv
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException
+    + FullyQualifiedErrorId : NativeCommandFailed
+
+PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26> py -m venv venv
+PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26> venv\Scripts\activate
+(venv) PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26> pip install -r requirements.txt
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+(venv) PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26> cd cv6
+(venv) PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26\cv6>
+(venv) PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26\cv6> pip install -r requirements.txt
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+(venv) PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26\cv6> cd machine_learning
+(venv) PS C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26\cv6\machine_learning> pip install -r requirements.txt
+Collecting numpy==2.0.2 (from -r requirements.txt (line 1))
+  Downloading numpy-2.0.2.tar.gz (18.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.9/18.9 MB 3.2 MB/s  0:00:06
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting scikit-learn==1.6.1 (from -r requirements.txt (line 2))
+  Downloading scikit_learn-1.6.1.tar.gz (7.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 2.3 MB/s  0:00:02
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... error
+  error: subprocess-exited-with-error
+
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 2
+  ╰─> [256 lines of output]
+      + meson setup C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763 C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\.mesonpy-i6wfmwm8 -Dbuildtype=release -Db_ndebug=if-release -Db_vscrt=md --native-file=C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\.mesonpy-i6wfmwm8\meson-python-native-file.ini
+      The Meson build system
+      Version: 1.10.2
+      Source dir: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763
+      Build dir: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\.mesonpy-i6wfmwm8
+      Build type: native build
+      Activating VS 17.14.27 (February 2026)
+      Project name: scikit-learn
+      Project version: 1.6.1
+      C compiler for the host machine: cl (msvc 19.44.35223 "Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35223 for x64")
+      C linker for the host machine: link link 14.44.35223.0
+      C++ compiler for the host machine: cl (msvc 19.44.35223 "Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35223 for x64")
+      C++ linker for the host machine: link link 14.44.35223.0
+      Cython compiler for the host machine: cython (cython 3.2.4)
+      Host machine cpu family: x86_64
+      Host machine cpu: x86_64
+      Compiler for C supports arguments -Wno-unused-but-set-variable: NO
+      Compiler for C supports arguments -Wno-unused-function: NO
+      Compiler for C supports arguments -Wno-conversion: NO
+      Compiler for C supports arguments -Wno-misleading-indentation: NO
+      Library m found: NO
+      Program python found: YES (C:\Users\bronk\Desktop\4. semester\Softvérové spracovanie biomedicínskych údajov\SSBU26\venv\Scripts\python.exe)
+      Run-time dependency OpenMP for c found: YES 2.0
+      Run-time dependency python found: YES 3.14
+      Build targets in project: 111
+
+      scikit-learn 1.6.1
+
+        User defined options
+          Native files: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\.mesonpy-i6wfmwm8\meson-python-native-file.ini
+          b_ndebug    : if-release
+          b_vscrt     : md
+          buildtype   : release
+
+      Found ninja.EXE-1.13.0.git.kitware.jobserver-pipe-1 at C:\Users\bronk\AppData\Local\Temp\pip-build-env-u8u2n686\normal\Scripts\ninja.EXE
+      + meson compile
+      [1/251] Generating sklearn/metrics/_pairwise_distances_reduction/_datasets_pair_pxd with a custom command
+      [2/251] Generating sklearn/metrics/_pairwise_distances_reduction/_base_pxd with a custom command
+      [3/251] Generating sklearn/utils/_seq_dataset_pxd with a custom command
+      [4/251] Generating sklearn/metrics/_dist_metrics_pxd with a custom command
+      [5/251] Generating sklearn/utils/_weight_vector_pxd with a custom command
+      [6/251] Copying file sklearn/utils/_cython_blas.pxd
+      [7/251] Copying file sklearn/_loss/_loss.pxd
+      [8/251] Copying file sklearn/utils/_openmp_helpers.pxd
+      [9/251] Copying file sklearn/__init__.py
+      [10/251] Copying file sklearn/utils/_random.pxd
+      [11/251] Copying file sklearn/metrics/_pairwise_distances_reduction/_classmode.pxd
+      [12/251] Copying file sklearn/utils/_typedefs.pxd
+      [13/251] Copying file sklearn/utils/_sorting.pxd
+      [14/251] Copying file sklearn/metrics/__init__.py
+      [15/251] Copying file sklearn/metrics/_pairwise_distances_reduction/__init__.py
+      [16/251] Copying file sklearn/utils/_vector_sentinel.pxd
+      [17/251] Copying file sklearn/utils/__init__.py
+      [18/251] Copying file sklearn/utils/_heap.pxd
+      [19/251] Generating sklearn/metrics/_pairwise_distances_reduction/_argkmin_pxd with a custom command
+      [20/251] Generating sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer_pxd with a custom command
+      [21/251] Generating sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors_pxd with a custom command
+      [22/251] Generating sklearn/neighbors/_binary_tree_pxi with a custom command
+      [23/251] Generating sklearn/_loss/_loss_pyx with a custom command
+      [24/251] Copying file sklearn/neighbors/_partition_nodes.pxd
+      [25/251] Copying file sklearn/linear_model/__init__.py
+      [26/251] Copying file sklearn/neighbors/__init__.py
+      [27/251] Generating sklearn/utils/_weight_vector_pyx with a custom command
+      [28/251] Generating sklearn/utils/_seq_dataset_pyx with a custom command
+      [29/251] Generating sklearn/metrics/_pairwise_distances_reduction/_base_pyx with a custom command
+      [30/251] Generating sklearn/metrics/_pairwise_distances_reduction/_datasets_pair_pyx with a custom command
+      [31/251] Generating sklearn/metrics/_dist_metrics_pyx with a custom command
+      [32/251] Generating sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer_pyx with a custom command
+      [33/251] Generating sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors_pyx with a custom command
+      [34/251] Generating sklearn/metrics/_pairwise_distances_reduction/_argkmin_pyx with a custom command
+      [35/251] Generating sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors_classmode_pyx with a custom command
+      [36/251] Generating sklearn/metrics/_pairwise_distances_reduction/_argkmin_classmode_pyx with a custom command
+      [37/251] Generating sklearn/linear_model/_sgd_fast_pyx with a custom command
+      [38/251] Generating sklearn/neighbors/_ball_tree_pyx with a custom command
+      [39/251] Generating sklearn/linear_model/_sag_fast_pyx with a custom command
+      [40/251] Generating sklearn/neighbors/_kd_tree_pyx with a custom command
+      [41/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/__check_build/_check_build.pyx
+      [42/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_openmp_helpers.pyx
+      [43/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/_isotonic.pyx
+      [44/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/ensemble/_hist_gradient_boosting/_gradient_boosting.pyx
+      [45/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/metrics/cluster/_expected_mutual_info_fast.pyx
+      [46/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/ensemble/_hist_gradient_boosting/histogram.pyx
+      [47/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/murmurhash.pyx
+      [48/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/decomposition/_cdnmf_fast.pyx
+      [49/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_hdbscan/_reachability.pyx
+      [50/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_random.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\utils\_random.pxd:7:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [51/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_heap.pyx
+      [52/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_hdbscan/_tree.pyx
+      [53/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_fast_dict.pyx
+      [54/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/arrayfuncs.pyx
+      [55/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_typedefs.pyx
+      [56/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_cython_blas.pyx
+      [57/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_sorting.pyx
+      [58/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/datasets/_svmlight_format_fast.pyx
+      [59/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/sparsefuncs_fast.pyx
+      [60/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_isfinite.pyx
+      [61/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/utils/_vector_sentinel.pyx
+      [62/251] Compiling Cython source sklearn/utils/_weight_vector.pyx
+      [63/251] Compiling Cython source sklearn/utils/_seq_dataset.pyx
+      warning: sklearn\utils\_random.pxd:7:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [64/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/metrics/_pairwise_fast.pyx
+      [65/251] Compiling Cython source sklearn/metrics/_pairwise_distances_reduction/_base.pyx
+      [66/251] Compiling Cython source sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.pyx
+      [67/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_dbscan_inner.pyx
+      [68/251] Compiling Cython source sklearn/metrics/_pairwise_distances_reduction/_middle_term_computer.pyx
+      [69/251] Compiling Cython source sklearn/metrics/_pairwise_distances_reduction/_argkmin_classmode.pyx
+      [70/251] Compiling Cython source sklearn/metrics/_pairwise_distances_reduction/_argkmin.pyx
+      [71/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_hierarchical_fast.pyx
+      [72/251] Compiling Cython source sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors_classmode.pyx
+      [73/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_k_means_common.pyx
+      [74/251] Compiling Cython source sklearn/_loss/_loss.pyx
+      [75/251] Compiling Cython source sklearn/metrics/_pairwise_distances_reduction/_radius_neighbors.pyx
+      [76/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_k_means_lloyd.pyx
+      [77/251] Compiling Cython source sklearn/metrics/_dist_metrics.pyx
+      warning: sklearn\metrics\_dist_metrics.pyx:855:44: Assigning to 'float64_t *' from 'const float64_t *' discards const qualifier
+      warning: sklearn\metrics\_dist_metrics.pyx:918:40: Assigning to 'float64_t *' from 'const float64_t *' discards const qualifier
+      warning: sklearn\metrics\_dist_metrics.pyx:3435:44: Assigning to 'float32_t *' from 'const float32_t *' discards const qualifier
+      warning: sklearn\metrics\_dist_metrics.pyx:3498:40: Assigning to 'float32_t *' from 'const float32_t *' discards const qualifier
+      [78/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_k_means_minibatch.pyx
+      [79/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_k_means_elkan.pyx
+      [80/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/decomposition/_online_lda_fast.pyx
+      [81/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/cluster/_hdbscan/_linkage.pyx
+      [82/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/ensemble/_hist_gradient_boosting/common.pyx
+      [83/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/ensemble/_gradient_boosting.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\neighbors\_quad_tree.pxd:15:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [84/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/ensemble/_hist_gradient_boosting/_binning.pyx
+      [85/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/ensemble/_hist_gradient_boosting/_predictor.pyx
+      [86/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/feature_extraction/_hashing_fast.pyx
+      [87/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/ensemble/_hist_gradient_boosting/splitting.pyx
+      [88/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/ensemble/_hist_gradient_boosting/_bitset.pyx
+      [89/251] Compiling C++ object sklearn/svm/libliblinear-skl.a.p/src_liblinear_tron.cpp.obj
+      [90/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/neighbors/_partition_nodes.pyx
+      [91/251] Compiling Cython source sklearn/linear_model/_sgd_fast.pyx
+      [92/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/manifold/_utils.pyx
+      [93/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/svm/_newrand.pyx
+      [94/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/manifold/_barnes_hut_tsne.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\neighbors\_quad_tree.pxd:15:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [95/251] Compiling Cython source sklearn/linear_model/_sag_fast.pyx
+      [96/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/linear_model/_cd_fast.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\utils\_random.pxd:7:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [97/251] Compiling C++ object sklearn/svm/libliblinear-skl.a.p/src_liblinear_linear.cpp.obj
+      C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\svm\src\liblinear\../newrand/newrand.h(40): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+      [98/251] Compiling C object sklearn/__check_build/_check_build.cp314-win_amd64.pyd.p/meson-generated_sklearn___check_build__check_build.pyx.c.obj
+      [99/251] Compiling C++ object sklearn/svm/liblibsvm-skl.a.p/src_libsvm_libsvm_template.cpp.obj
+      C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\svm\src\libsvm\../newrand/newrand.h(40): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+      C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\svm\src\libsvm\svm.cpp(1881): warning C4805: '|=': unsafe mix of type 'int' and type 'bool' in operation
+      C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\svm\src\libsvm\svm.cpp(3157): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+      C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\svm\src\libsvm\svm.cpp(1881): warning C4805: '|=': unsafe mix of type 'int' and type 'bool' in operation
+      C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\svm\src\libsvm\svm.cpp(3157): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+      [100/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/preprocessing/_csr_polynomial_expansion.pyx
+      [101/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/preprocessing/_target_encoder_fast.pyx
+      [102/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/svm/_libsvm.pyx
+      [103/251] Compiling C++ object sklearn/utils/murmurhash.cp314-win_amd64.pyd.p/src_MurmurHash3.cpp.obj
+      [104/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/svm/_liblinear.pyx
+      [105/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/svm/_libsvm_sparse.pyx
+      [106/251] Compiling Cython source sklearn/neighbors/_kd_tree.pyx
+      warning: sklearn\neighbors\_binary_tree.pxi:1092:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:1958:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2053:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2222:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2345:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2402:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2403:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2728:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:3594:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:3689:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:3858:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:3981:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:4038:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:4039:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_kd_tree.pyx:74:4: Assigning to 'float64_t *' from 'const float64_t *' discards const qualifier
+      warning: sklearn\neighbors\_kd_tree.pyx:75:4: Assigning to 'float64_t *' from 'const float64_t *' discards const qualifier
+      warning: sklearn\neighbors\_kd_tree.pyx:342:4: Assigning to 'float32_t *' from 'const float32_t *' discards const qualifier
+      warning: sklearn\neighbors\_kd_tree.pyx:343:4: Assigning to 'float32_t *' from 'const float32_t *' discards const qualifier
+      [107/251] Compiling C object sklearn/_isotonic.cp314-win_amd64.pyd.p/meson-generated_sklearn__isotonic.pyx.c.obj
+      [108/251] Compiling C object sklearn/utils/_openmp_helpers.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__openmp_helpers.pyx.c.obj
+      [109/251] Compiling C object sklearn/utils/_heap.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__heap.pyx.c.obj
+      [110/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/neighbors/_quad_tree.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\neighbors\_quad_tree.pxd:15:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [111/251] Compiling Cython source sklearn/neighbors/_ball_tree.pyx
+      warning: sklearn\neighbors\_binary_tree.pxi:1092:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:1958:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2053:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2222:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2345:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2402:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2403:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:2728:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:3594:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:3689:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:3858:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:3981:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:4038:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_binary_tree.pxi:4039:8: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_ball_tree.pyx:105:4: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_ball_tree.pyx:107:4: Assigning to 'float64_t *' from 'const float64_t *' discards const qualifier
+      warning: sklearn\neighbors\_ball_tree.pyx:308:4: Assigning to 'intp_t *' from 'const intp_t *' discards const qualifier
+      warning: sklearn\neighbors\_ball_tree.pyx:310:4: Assigning to 'float32_t *' from 'const float32_t *' discards const qualifier
+      [112/251] Compiling C object sklearn/utils/_sorting.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__sorting.pyx.c.obj
+      [113/251] Compiling C object sklearn/utils/murmurhash.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils_murmurhash.pyx.c.obj
+      ..\sklearn\utils\src/MurmurHash3.h(16): warning C4142: 'uint32_t': benign redefinition of type
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdint.h(24): note: see declaration of 'uint32_t'
+      [114/251] Compiling C object sklearn/utils/arrayfuncs.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils_arrayfuncs.pyx.c.obj
+      [115/251] Compiling C++ object sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cp314-win_amd64.pyd.p/meson-generated_sklearn_metrics__pairwise_distances_reduction__datasets_pair.pyx.cpp.obj
+      FAILED: [code=2] sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cp314-win_amd64.pyd.p/meson-generated_sklearn_metrics__pairwise_distances_reduction__datasets_pair.pyx.cpp.obj
+      "cl" "-Isklearn\metrics\_pairwise_distances_reduction\_datasets_pair.cp314-win_amd64.pyd.p" "-Isklearn\metrics\_pairwise_distances_reduction" "-I..\sklearn\metrics\_pairwise_distances_reduction" "-I..\..\..\pip-build-env-u8u2n686\overlay\Lib\site-packages\numpy\_core\include" "-IC:\Users\bronk\AppData\Local\Python\pythoncore-3.14-64\Include" "-DNDEBUG" "/MD" "/nologo" "/showIncludes" "/utf-8" "/Zc:__cplusplus" "/W2" "/EHsc" "/std:c++14" "/permissive-" "/O2" "/Gw" "-DNPY_NO_DEPRECATED_API=NPY_1_9_API_VERSION" "/Fdsklearn\metrics\_pairwise_distances_reduction\_datasets_pair.cp314-win_amd64.pyd.p\meson-generated_sklearn_metrics__pairwise_distances_reduction__datasets_pair.pyx.cpp.pdb" /Fosklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cp314-win_amd64.pyd.p/meson-generated_sklearn_metrics__pairwise_distances_reduction__datasets_pair.pyx.cpp.obj "/c" sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cp314-win_amd64.pyd.p/sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.pyx.cpp
+      c1xx: fatal error C1083: Cannot open source file: 'sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.cp314-win_amd64.pyd.p/sklearn/metrics/_pairwise_distances_reduction/_datasets_pair.pyx.cpp': No such file or directory
+      [116/251] Compiling C object sklearn/utils/_random.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__random.pyx.c.obj
+      [117/251] Compiling C object sklearn/utils/_typedefs.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__typedefs.pyx.c.obj
+      [118/251] Compiling C object sklearn/utils/_cython_blas.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__cython_blas.pyx.c.obj
+      [119/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/tree/_splitter.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\tree\_partitioner.pxd:13:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\neighbors\_quad_tree.pxd:15:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [120/251] Compiling C++ object sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__fast_dict.pyx.cpp.obj
+      sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/sklearn/utils/_fast_dict.pyx.cpp(22781): warning C4551: function call missing argument list
+      sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/sklearn/utils/_fast_dict.pyx.cpp(22782): warning C4551: function call missing argument list
+      sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/sklearn/utils/_fast_dict.pyx.cpp(25575): warning C4551: function call missing argument list
+      sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/sklearn/utils/_fast_dict.pyx.cpp(25582): warning C4551: function call missing argument list
+      sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/sklearn/utils/_fast_dict.pyx.cpp(25939): warning C4551: function call missing argument list
+      sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/sklearn/utils/_fast_dict.pyx.cpp(29684): warning C4551: function call missing argument list
+      sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/sklearn/utils/_fast_dict.pyx.cpp(29685): warning C4551: function call missing argument list
+      sklearn/utils/_fast_dict.cp314-win_amd64.pyd.p/sklearn/utils/_fast_dict.pyx.cpp(30088): warning C4551: function call missing argument list
+      [121/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/tree/_criterion.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\neighbors\_quad_tree.pxd:15:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [122/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/tree/_partitioner.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\tree\_partitioner.pxd:13:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [123/251] Compiling C++ object sklearn/utils/_vector_sentinel.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__vector_sentinel.pyx.cpp.obj
+      sklearn/utils/_vector_sentinel.cp314-win_amd64.pyd.p/sklearn/utils/_vector_sentinel.pyx.cpp(14911): warning C4551: function call missing argument list
+      sklearn/utils/_vector_sentinel.cp314-win_amd64.pyd.p/sklearn/utils/_vector_sentinel.pyx.cpp(14912): warning C4551: function call missing argument list
+      sklearn/utils/_vector_sentinel.cp314-win_amd64.pyd.p/sklearn/utils/_vector_sentinel.pyx.cpp(15035): warning C4551: function call missing argument list
+      sklearn/utils/_vector_sentinel.cp314-win_amd64.pyd.p/sklearn/utils/_vector_sentinel.pyx.cpp(17630): warning C4551: function call missing argument list
+      sklearn/utils/_vector_sentinel.cp314-win_amd64.pyd.p/sklearn/utils/_vector_sentinel.pyx.cpp(17637): warning C4551: function call missing argument list
+      sklearn/utils/_vector_sentinel.cp314-win_amd64.pyd.p/sklearn/utils/_vector_sentinel.pyx.cpp(18633): warning C4551: function call missing argument list
+      sklearn/utils/_vector_sentinel.cp314-win_amd64.pyd.p/sklearn/utils/_vector_sentinel.pyx.cpp(18634): warning C4551: function call missing argument list
+      [124/251] Compiling C object sklearn/utils/_weight_vector.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__weight_vector.pyx.c.obj
+      [125/251] Compiling C object sklearn/utils/_seq_dataset.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__seq_dataset.pyx.c.obj
+      [126/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/tree/_tree.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\neighbors\_quad_tree.pxd:15:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [127/251] Compiling C object sklearn/utils/_isfinite.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils__isfinite.pyx.c.obj
+      [128/251] Compiling Cython source C:/Users/bronk/AppData/Local/Temp/pip-install-1isu_hmn/scikit-learn_f696660649d142af9c0789b1badc5763/sklearn/tree/_utils.pyx
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\neighbors\_quad_tree.pxd:15:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      warning: C:\Users\bronk\AppData\Local\Temp\pip-install-1isu_hmn\scikit-learn_f696660649d142af9c0789b1badc5763\sklearn\utils\_random.pxd:7:0: Assignment in pxd file will not be executed. Suggest declaring as const.
+      [129/251] Compiling C object sklearn/metrics/_pairwise_fast.cp314-win_amd64.pyd.p/meson-generated_sklearn_metrics__pairwise_fast.pyx.c.obj
+      [130/251] Compiling C object sklearn/utils/sparsefuncs_fast.cp314-win_amd64.pyd.p/meson-generated_sklearn_utils_sparsefuncs_fast.pyx.c.obj
+      [131/251] Compiling C object sklearn/metrics/_dist_metrics.cp314-win_amd64.pyd.p/meson-generated_sklearn_metrics__dist_metrics.pyx.c.obj
+      sklearn/metrics/_dist_metrics.cp314-win_amd64.pyd.p/sklearn/metrics/_dist_metrics.pyx.c(27264): warning C4090: '=': different 'const' qualifiers
+      sklearn/metrics/_dist_metrics.cp314-win_amd64.pyd.p/sklearn/metrics/_dist_metrics.pyx.c(28038): warning C4090: '=': different 'const' qualifiers
+      sklearn/metrics/_dist_metrics.cp314-win_amd64.pyd.p/sklearn/metrics/_dist_metrics.pyx.c(46700): warning C4090: '=': different 'const' qualifiers
+      sklearn/metrics/_dist_metrics.cp314-win_amd64.pyd.p/sklearn/metrics/_dist_metrics.pyx.c(47474): warning C4090: '=': different 'const' qualifiers
+      [132/251] Compiling C object sklearn/_loss/_loss.cp314-win_amd64.pyd.p/meson-generated_sklearn__loss__loss.pyx.c.obj
+      ninja: build stopped: subcommand failed.
+      Activating VS 17.14.27 (February 2026)
+      INFO: automatically activated MSVC compiler environment
+      INFO: autodetecting backend as ninja
+      INFO: calculating backend command to run: C:\Users\bronk\AppData\Local\Temp\pip-build-env-u8u2n686\normal\Scripts\ninja.EXE
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> scikit-learn
+
+note: This is an issue with the package mentioned above, not pip.

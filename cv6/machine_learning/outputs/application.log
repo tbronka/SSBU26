@@ -1,0 +1,47 @@
+2026-04-08 22:09:27,489 - INFO - Application started.
+2026-04-08 22:09:27,508 - INFO - Starting the experiment...
+2026-04-08 22:09:27,518 - INFO - Starting replication 1/10
+2026-04-08 22:09:35,119 - INFO - Starting replication 2/10
+2026-04-08 22:09:36,989 - INFO - Starting replication 3/10
+2026-04-08 22:09:37,076 - INFO - Starting replication 4/10
+2026-04-08 22:09:37,251 - INFO - Starting replication 5/10
+2026-04-08 22:09:37,294 - INFO - Starting replication 6/10
+2026-04-08 22:09:37,348 - INFO - Starting replication 7/10
+2026-04-08 22:09:37,391 - INFO - Starting replication 8/10
+2026-04-08 22:09:37,446 - INFO - Starting replication 9/10
+2026-04-08 22:09:37,504 - INFO - Starting replication 10/10
+2026-04-08 22:09:37,562 - INFO - Experiment completed successfully.
+2026-04-08 22:09:37,563 - INFO - Generating plots for the experiment results...
+2026-04-08 22:14:07,026 - INFO - Plots generated successfully.
+2026-04-08 22:14:07,026 - INFO - Application finished successfully.
+2026-04-08 22:45:15,333 - INFO - Application started.
+2026-04-08 22:45:43,557 - INFO - Application started.
+2026-04-08 22:45:43,573 - INFO - Starting the experiment...
+2026-04-08 22:45:43,585 - INFO - Starting replication 1/10
+2026-04-08 22:46:31,717 - INFO - Application started.
+2026-04-08 22:46:31,736 - INFO - Starting the experiment...
+2026-04-08 22:46:31,747 - INFO - Starting replication 1/10
+2026-04-08 22:52:21,700 - INFO - Application started.
+2026-04-08 22:52:21,715 - INFO - Starting the experiment...
+2026-04-08 22:52:21,725 - INFO - Starting replication 1/5
+2026-04-08 22:56:09,442 - INFO - Application started.
+2026-04-08 22:56:09,457 - INFO - Starting the experiment...
+2026-04-08 22:56:09,467 - INFO - Starting replication 1/5
+2026-04-08 22:59:11,849 - INFO - Application started.
+2026-04-08 22:59:11,863 - INFO - Starting the experiment...
+2026-04-08 22:59:11,874 - INFO - Starting replication 1/1
+2026-04-08 22:59:58,831 - INFO - Experiment completed successfully.
+2026-04-08 22:59:58,832 - INFO - Generating plots for the experiment results...
+2026-04-08 23:00:46,703 - INFO - Plots generated successfully.
+2026-04-08 23:00:46,703 - INFO - Application finished successfully.
+2026-04-08 23:01:48,879 - INFO - Application started.
+2026-04-08 23:01:48,895 - INFO - Starting the experiment...
+2026-04-08 23:01:48,907 - INFO - Starting replication 1/5
+2026-04-08 23:02:35,704 - INFO - Starting replication 2/5
+2026-04-08 23:03:17,712 - INFO - Starting replication 3/5
+2026-04-08 23:04:02,671 - INFO - Starting replication 4/5
+2026-04-08 23:04:50,006 - INFO - Starting replication 5/5
+2026-04-08 23:05:34,301 - INFO - Experiment completed successfully.
+2026-04-08 23:05:34,301 - INFO - Generating plots for the experiment results...
+2026-04-08 23:05:48,874 - INFO - Plots generated successfully.
+2026-04-08 23:05:48,874 - INFO - Application finished successfully.
