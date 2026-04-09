@@ -37,10 +37,17 @@ Do implementácie pridajte ukladanie všetkých grafov, ktoré sa vytvárajú pr
 
 **V skripte `main.py`** nastavte počet replikácií na vyššie číslo (rozumne, podľa vlastného uváženia). Vykonajte beh aplikácie s Vašou implementáciou. Po skončení behu zanalyzujte vygenerované grafy a pár vetami popíšte ich interpretáciu. (Napr. v čom je ktorý ML model lepší, a pod.)
 
-#TODO - Interpretácia
+- model som skúšala spustiť na 50 replikácií, no v noci mi bohužiaľ spadol, tak som pristúpila k 20
 
-**Odovzdávanie riešenia:** Ako súčasť riešenia zahrňte okrem odpovedí na otázky aj skripty s Vašou implementáciou, vygenerované logy a grafy (všetko môžete dať na Github).
+### Interpretácia
+- oba modely sú spoľahlivé nad 0.95, no model SVC je presnejší, nakoľko jeho vrchol je užší a teda stabilnejší
+- priemerná presnosť oboch modelov je vysoká => dokonca logistická regresia vyšla lepšie
+- priemerná chyba false negatives je pre SVC nižšia o 0.2 a teda SVC prehliadne menej chorých ako logistická regresia
 
+### Najlepšie zvolené parametre pre SVC:
+- coef0 = 0
+- degree = 3
+- gamma = scale
 ----
 
 #### Referencie

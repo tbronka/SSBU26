@@ -49,7 +49,7 @@ def run_experiment(dataset, models, param_grids, logger):
     - results: DataFrame, the results of the experiment.
     """
     logger.info("Starting the experiment...")
-    experiment = Experiment(models, param_grids, n_replications=50, logger=logger)
+    experiment = Experiment(models, param_grids, n_replications=20, logger=logger)
     results = experiment.run(dataset.data, dataset.target)
     logger.info("Experiment completed successfully.")
     return experiment, results
