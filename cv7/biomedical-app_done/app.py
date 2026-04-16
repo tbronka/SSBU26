@@ -10,6 +10,7 @@ def server(input, output, session):
     patient_data_dict = reactive.Value(data.data)
     conditional_ui = reactive.Value(None)
     txt_status = reactive.Value("")
+    my_average = reactive.Value("")
 
     # Define ranges and descriptions for each measurement type
     measurement_ranges = {
@@ -41,6 +42,25 @@ def server(input, output, session):
         txt_status.set(result)
 
     @reactive.Effect
+    @reactive.event(input.calculate_avg)
+    def calculate_avg():
+        allData = patient_data_dict.get()
+        measurement_type = input.measurement_type() or "Cholesterol"
+        allValues = []
+
+        for i in allData:
+            df = allData[i]
+            if measurement_type in df.columns:
+                allValues.extend(df[measurement_type].tolist())
+
+        if allValues:
+            average = sum(allValues) / len(allValues)
+            my_average.set(f"Priemer = {average:.2f}")
+        else:
+            my_average.set("")
+            txt_status.set(f"Neboli nájdené žiadne dáta pre atribút: {measurement_type}")
+
+    @reactive.Effect
     @reactive.event(input.view_type)
     def view_type_change_event():
         view_type = input.view_type()
@@ -52,6 +72,11 @@ def server(input, output, session):
             conditional_ui.set(None)  # Clear the dynamic UI
 
     # OUTPUTS
+    @output
+    @render.text
+    def avg_value():
+        # Vraciame hodnotu z premenovanej reaktívnej premennej
+        return my_average.get()
 
     @output
     @render.ui

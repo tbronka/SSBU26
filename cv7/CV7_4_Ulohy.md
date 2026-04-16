@@ -13,7 +13,7 @@ Rozšírte aplikáciu o možnosť zobrazenia nového typu grafu - napríklad "Bo
 ## Úloha 2: Zobrazenie priemernej hodnoty merania pre všetkých pacientov
 Pridajte do aplikácie možnosť vypočítať a zobraziť priemernú hodnotu vybraného merania (napr. Cholesterol) pre všetkých pacientov. Implementujte nové tlačidlo v používateľskom rozhraní a funkciu na výpočet priemeru.
 
-### Hint:
+### Hint: 
 - Pridajte nové tlačidlo `ui.input_action_button("calculate_avg", "Vypočítať priemer")` do `app_ui.py`.
 - Implementujte obsluhu udalosti v `app.py`, ktorá vypočíta priemer pre vybrané meranie zo všetkých pacientov.
 - Zobrazte výsledok v textovom výstupe `ui.output_text("txt_status_code")`, alebo vytvorte nový textový výstup napr. `ui.output_text("avg_value")`.
